@@ -55,16 +55,11 @@ public abstract class MonoSingleton<T> : MonoBehaviour where T : MonoSingleton<T
     // executing before this one, no need to search the object.
     private void Awake()
     {
-        if (m_Instance == null)
+        if (m_Instance == null || m_Instance != this)
         {
             m_Instance = this as T;
         }
-        else if (m_Instance != this)
-        {
-            Debug.LogError("Another instance of " + GetType() + " is already exist! Destroying self...");
-            DestroyImmediate(this);
-            return;
-        }
+
         if (!_isInitialized)
         {
             DontDestroyOnLoad(gameObject);

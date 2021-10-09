@@ -25,50 +25,31 @@ public class InputManager : MonoSingleton<InputManager>
         switch (input)
         {
             case Direction.Up:
-                if (_currentDirection == Direction.Down)
-                    GameManager.instance.CurrentGameState = GameManager.GameState.GameOver;
-
                 _currentDirection = input;
                 if (transform.position == _currentPos)
                     _currentPos += Vector3.forward;
                 transform.position = Vector3.MoveTowards(transform.position, _currentPos, Time.deltaTime * speed);
-
-
                 break;
 
             case Direction.Down:
-                if (_currentDirection == Direction.Up)
-                    GameManager.instance.CurrentGameState = GameManager.GameState.GameOver;
-
                 _currentDirection = input;
                 if (transform.position == _currentPos)
                     _currentPos += -Vector3.forward;
                 transform.position = Vector3.MoveTowards(transform.position, _currentPos, Time.deltaTime * speed);
-
                 break;
 
             case Direction.Right:
-                if (_currentDirection == Direction.Left)
-                    GameManager.instance.CurrentGameState = GameManager.GameState.GameOver;
-
-
                 _currentDirection = input;
                 if (transform.position == _currentPos)
                     _currentPos += Vector3.right;
                 transform.position = Vector3.MoveTowards(transform.position, _currentPos, Time.deltaTime * speed);
-
                 break;
 
             case Direction.Left:
-                if (_currentDirection == Direction.Right)
-                    GameManager.instance.CurrentGameState = GameManager.GameState.GameOver;
-
-
                 _currentDirection = input;
                 if (transform.position == _currentPos)
                     _currentPos += Vector3.left;
                 transform.position = Vector3.MoveTowards(transform.position, _currentPos, Time.deltaTime * speed);
-
                 break;
 
             case Direction.Nothing:

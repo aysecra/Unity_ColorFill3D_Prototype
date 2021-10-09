@@ -107,7 +107,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ecd50b68115489d4795ea15a9c9f2cfa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speed: 0
+  _speed: 7
+  _collectedMaterial: {fileID: 2100000, guid: 208890026612ddd4e96e5edff0e3bed0, type: 2}
+  _oldMaterial: {fileID: 2100000, guid: e2d55f706a5a30e438ae530295a85746, type: 2}
 --- !u!54 &3185332158176135219
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -122,5 +124,5 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 112
   m_CollisionDetection: 0

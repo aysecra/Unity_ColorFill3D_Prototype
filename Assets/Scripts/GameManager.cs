@@ -8,7 +8,7 @@ public class GameManager : MonoSingleton<GameManager>
     {
         Prepare,
         MainGame,
-        NextLevel,
+        NextPart,
         FinishGame,
         GameOver
     }
@@ -24,7 +24,7 @@ public class GameManager : MonoSingleton<GameManager>
                     break;
                 case GameState.MainGame:
                     break;
-                case GameState.NextLevel:
+                case GameState.NextPart:
                     break;
                 case GameState.FinishGame:
                     break;
